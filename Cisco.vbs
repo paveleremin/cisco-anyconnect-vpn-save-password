@@ -1,12 +1,12 @@
 Dim PASSWORD
 
-PASSWORD = "SET_YOUR_PASSWORD_HERE"
+PASSWORD = "YOUR_PASSWORD"
 
 Set WshShell = WScript.CreateObject("WScript.Shell")
 
-WshShell.Run """%PROGRAMFILES(x86)%\Cisco\Cisco AnyConnect Secure Mobility Client\vpnui.exe"""
+WshShell.Run """C:\Program Files (x86)\Cisco\Cisco Secure Client\UI\csc_ui.exe"""
 
-WScript.Sleep 2000
+WScript.Sleep 1000
 
 WshShell.AppActivate "Cisco AnyConnect Secure Mobility Client"
 
@@ -14,14 +14,13 @@ WshShell.SendKeys "{TAB}"
 WshShell.SendKeys "{TAB}"
 WshShell.SendKeys "{ENTER}"
 
-WScript.Sleep 3000
-WshShell.SendKeys "{TAB}"
-WshShell.SendKeys "{ENTER}"
 
-WScript.Sleep 6000
+
+WScript.Sleep 1000
 WshShell.SendKeys PASSWORD
 WshShell.SendKeys "{ENTER}"
 WScript.Sleep 500
+WshShell.SendKeys "{ENTER}"
 
 Function ClipBoard(input)
   If IsNull(input) Then
