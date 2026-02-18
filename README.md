@@ -2,6 +2,8 @@
 
 This simple script will save you the hassle of constantly typing your password.
 
+**Note:** This script is designed for Windows systems only, as it uses VBScript.
+
 ## Instruction
 
 1. Copy file Cisco.vbs to your computer
